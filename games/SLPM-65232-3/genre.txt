@@ -1,0 +1,4 @@
+Action
+Platformer
+Beat'em Up
+Survival Horror.

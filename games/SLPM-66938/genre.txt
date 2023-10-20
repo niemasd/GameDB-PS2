@@ -1,0 +1,3 @@
+Adventure
+Simulation
+Strategy.

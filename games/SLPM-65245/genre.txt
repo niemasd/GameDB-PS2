@@ -1,0 +1,4 @@
+Action
+Adventure
+Shooter
+Survival Horror

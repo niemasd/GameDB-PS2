@@ -1,0 +1,5 @@
+Action
+Adventure
+Beat'em Up
+Platformer
+Shooter.

@@ -67,7 +67,7 @@ if __name__ == "__main__":
                 except Exception as e:
                     print("ERROR: %s" % html_fn); raise e
             elif cols[0] == 'SERIAL NUMBER(S)':
-                serials = [col for col in cols[1:] if len(col) != 0]
+                serials = [clean(col) for col in cols[1:] if len(col) != 0]
 
         # parse game languages
         soup_lang = BeautifulSoup(raw_data.split('<!-- Languages Sectional -->')[1], 'html.parser')
@@ -80,7 +80,7 @@ if __name__ == "__main__":
         if official_title is None:
             print("Missing official title: %s" % html_fn); exit(1)
         else:
-            curr_data['official_title'] = official_title
+            curr_data['title'] = official_title
         if region is None:
             print("Missing region: %s" % html_fn); exit(1)
         else:
@@ -88,15 +88,15 @@ if __name__ == "__main__":
         if genre is None:
             print("Missing genre: %s" % html_fn); exit(1)
         else:
-            curr_data['genre'] = genre
+            curr_data['genre'] = [clean(v).strip() for v in genre.split('/')]
         if developer is None:
             print("Missing developer: %s" % html_fn); exit(1)
         else:
-            curr_data['developer'] = developer
+            curr_data['developer'] = [clean(v).strip() for v in developer.split('/')]
         if publisher is None:
             print("Missing publisher: %s" % html_fn); exit(1)
         else:
-            curr_data['publisher'] = publisher
+            curr_data['publisher'] = [clean(v).strip() for v in publisher.split('/')]
         if release_date is None:
             print("Missing release date: %s" % html_fn); exit(1)
         elif isinstance(release_date, int):
@@ -106,7 +106,7 @@ if __name__ == "__main__":
         if languages is None:
             print("Missing languages: %s" % html_fn); exit(1)
         else:
-            curr_data['languages'] = languages
+            curr_data['language'] = languages
         if serials is None or len(serials) == 0:
             print("Missing seral numbers in disc: %s" % html_fn); exit(1)
         elif len(serials) == 1:

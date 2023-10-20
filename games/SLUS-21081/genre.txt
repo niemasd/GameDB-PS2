@@ -1,0 +1,6 @@
+Action
+Adventure
+Beat'em Up
+Chess
+Fighting
+Puzzle.
