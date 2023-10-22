@@ -1,5 +1,5 @@
 # GameDB-PS2
-Sony PlayStation 2
+Sony PlayStation 2 (PS2), part of [GameDB](https://github.com/niemasd/GameDB).
 
 ## Structured Downloads
 * **[`PS2.data.json`](https://github.com/niemasd/GameDB-PS2/releases/latest/download/PS2.data.json):** All data, structured in the JSON format
