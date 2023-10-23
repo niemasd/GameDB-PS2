@@ -9,3 +9,4 @@ Sony PlayStation 2 (PS2), part of [GameDB](https://github.com/niemasd/GameDB).
 
 # Sources
 * [PlayStation Datacenter](https://psxdatacenter.com/)
+* [VGCollect](https://www.vgcollect.com/)
