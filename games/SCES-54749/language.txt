@@ -1,0 +1,8 @@
+English
+Dutch
+French
+German
+Greek
+Italian
+Portuguese
+Spanish

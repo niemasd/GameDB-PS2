@@ -1,0 +1,5 @@
+English
+German
+Finnish
+Swedish
+Czech

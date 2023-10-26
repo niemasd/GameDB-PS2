@@ -76,8 +76,8 @@ if __name__ == "__main__":
             DUMMY, serial, title, language_s = cols
             language = list()
             for lang in language_s.upper().replace('<','').replace('/TD>','').replace(';','').replace('`','').replace('J[E]','[J][E]').replace('(N(SW)','(N)(SW)').replace('{','').replace('(','').replace('}',']').replace(')',']').replace('[','').split(']'):
-                if len(lang) != 0 and lang not in LANG:
-                    print(title); print(lang); exit()
+                if len(lang) != 0:
+                    language.append(LANG[lang])
             game_path = '%s/%s' % (games_path, serial); makedirs(game_path, exist_ok=True)
             title_path = '%s/title.txt' % game_path
             if not isfile(title_path):
