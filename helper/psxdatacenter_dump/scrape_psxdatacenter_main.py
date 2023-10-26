@@ -18,21 +18,40 @@ URLS = {
 
 # language map (need to upper() the original ones first)
 LANG = {
-    'CZ': 'Czech',
-    'D':  'Danish',
-    'DU': 'Dutch',
-    'E':  'English',
-    'F':  'French',
-    'FI': 'Finnish',
-    'G':  'German',
-    'HU': 'Hungarian',
-    'I':  'Italian',
-    'J':  'Japanese',
-    'K':  'Korean',
-    'PL': 'Polish',
-    'R':  'Russian',
-    'S':  'Spanish',
-    'SW': 'Swedish',
+    'A':   'Arabic',
+    'AF':  'Afrikaans',
+    'AR':  'Arabic',
+    'C':   'Czech',
+    'CA':  'Catalan',
+    'CAT': 'Catalan',
+    'CH':  'Chinese',
+    'CR':  'Croatian', # not sure
+    'CZ':  'Czech',
+    'D':   'Danish',
+    'DU':  'Dutch',
+    'E':   'English',
+    'F':   'French',
+    'FI':  'Finnish',
+    'FL':  'Finnish',
+    'G':   'German',
+    'GA':  'Gaelic',
+    'GR':  'Greek',
+    'H':   'Hungarian',
+    'HI':  'Hindi',
+    'HU':  'Hungarian',
+    'I':   'Italian',
+    'J':   'Japanese',
+    'K':   'Korean',
+    'N':   'Norwegian',
+    'NW':  'Norwegian',
+    'P':   'Portuguese',
+    'PL':  'Polish',
+    'PO':  'Polish', # not sure
+    'R':   'Russian',
+    'S':   'Spanish',
+    'SC':  'Scandinavian',
+    'SW':  'Swedish',
+    'T':   'Turkish',
 }
 
 # clean a string
@@ -44,13 +63,21 @@ if __name__ == "__main__":
     games_path = '%s/games' % '/'.join(abspath(expanduser(argv[0])).split('/')[:-3])
     for region, url in URLS.items():
         print("Parsing %s..." % region)
-        soup = BeautifulSoup(urlopen(url).read(), 'html.parser')
-        for row in list(soup.find_all('table', {'id':'table302'}))[0].find_all('tr'):
-            DUMMY, serial, title, language_s = [clean(v.text) for v in row.find_all('td')]
+        raw_data = clean(urlopen(url).read().decode('utf-8', errors='replace'))
+        raw_data = raw_data.replace('<tr>\n<tr>','<tr>')
+        raw_data = raw_data.replace('</td>\n</td>', '</td>\n</tr>')
+        raw_data = raw_data.replace('<td>\n</tr>', '</td>\n</tr>')
+        raw_data = raw_data.replace('</td>\n<tr>', '</td>\n</tr>\n<tr>')
+        soup = BeautifulSoup(raw_data, 'html.parser')
+        for row in soup.find_all('tr'):
+            cols = [clean(v.text) for v in row.find_all('td')]
+            if len(cols) == 0:
+                continue
+            DUMMY, serial, title, language_s = cols
             language = list()
-            for lang in language_s.upper().replace('(','').replace(')',']').replace('[','').split(']'):
+            for lang in language_s.upper().replace('<','').replace('/TD>','').replace(';','').replace('`','').replace('J[E]','[J][E]').replace('(N(SW)','(N)(SW)').replace('{','').replace('(','').replace('}',']').replace(')',']').replace('[','').split(']'):
                 if len(lang) != 0 and lang not in LANG:
-                    print(lang); exit()
+                    print(title); print(lang); exit()
             game_path = '%s/%s' % (games_path, serial); makedirs(game_path, exist_ok=True)
             title_path = '%s/title.txt' % game_path
             if not isfile(title_path):
