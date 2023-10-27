@@ -1,6 +1,4 @@
+Dutch
 English
 French
-Finnish
 German
-Italian
-Spanish

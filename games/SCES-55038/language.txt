@@ -1,12 +1,15 @@
-English
 Czech
 Danish
 Dutch
-French
+English
 Finnish
+French
 German
+Greek
 Italian
 Norwegian
+Polish
 Portuguese
+Russian
 Spanish
 Swedish

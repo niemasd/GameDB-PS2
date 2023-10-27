@@ -1,8 +1,8 @@
-English
 Danish
 Dutch
-French
+English
 Finnish
+French
 German
 Italian
 Norwegian

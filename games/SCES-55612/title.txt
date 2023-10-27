@@ -1,1 +1,1 @@
-SingStar: SuomiHitit
+SingStar SuomiHitit

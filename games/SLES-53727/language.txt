@@ -1,7 +1,7 @@
-English
-Danks
+Danish
 Dutch
+English
 Finnish
-Norweigan
+Norwegian
 Polish
 Swedish

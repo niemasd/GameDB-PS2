@@ -1,5 +1,5 @@
-English
-German
-Finnish
-Swedish
 Czech
+English
+Finnish
+German
+Swedish

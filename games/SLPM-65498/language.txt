@@ -3,5 +3,4 @@ French
 German
 Italian
 Japanese
-Korean
 Spanish

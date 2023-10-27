@@ -1,9 +1,10 @@
-English
 Danish
 Dutch
-French
+English
 Finnish
+French
 German
+Greek
 Italian
 Norwegian
 Portuguese

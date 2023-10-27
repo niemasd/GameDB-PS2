@@ -1,0 +1,6 @@
+Czech
+English
+Finnish
+German
+Russian
+Swedish

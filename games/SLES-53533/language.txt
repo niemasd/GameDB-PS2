@@ -1,7 +1,8 @@
-English
 Danish
 Dutch
+English
 Greek
 Hungarian
+Norwegian
 Polish
 Swedish

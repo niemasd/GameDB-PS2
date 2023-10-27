@@ -1,4 +1,4 @@
 Danish
-Finnish
-Norweigan
+English
+Norwegian
 Swedish

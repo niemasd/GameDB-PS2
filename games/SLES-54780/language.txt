@@ -1,5 +1,6 @@
-English
-Danks
+Danish
 Dutch
-Norweigan
+English
+Finnish
+Norwegian
 Swedish

@@ -1,9 +1,8 @@
-English
 Danish
-French
+English
 Finnish
+Greek
 Norwegian
 Polish
 Russian
 Swedish
-Turkish

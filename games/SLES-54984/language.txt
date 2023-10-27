@@ -1,11 +1,11 @@
-English
 Danish
 Dutch
-French
+English
 Finnish
+French
 German
 Italian
 Norwegian
-Polish
+Portuguese
 Spanish
 Swedish

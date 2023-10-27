@@ -1,8 +1,7 @@
-English
 Dutch
+English
 French
 German
-Greek
 Italian
 Portuguese
 Spanish

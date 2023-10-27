@@ -1,1 +1,1 @@
-Kill.Switch
+kill.switch

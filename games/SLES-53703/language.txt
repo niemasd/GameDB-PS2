@@ -1,10 +1,10 @@
-English
-Danks
+Danish
 Dutch
+English
 Finnish
 French
 German
 Italian
-Norweigan
+Norwegian
 Spanish
 Swedish

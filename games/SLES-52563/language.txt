@@ -1,6 +1,6 @@
-English
 Danish
 Dutch
+English
 Greek
 Norwegian
 Swedish

@@ -1,8 +1,8 @@
+Dutch
 English
 French
 German
-Italian
-Spanish
-Dutch
-Portuguese
 Greek
+Italian
+Portuguese
+Spanish
