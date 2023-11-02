@@ -9,6 +9,7 @@ Sony PlayStation 2 (PS2), part of [GameDB](https://github.com/niemasd/GameDB).
 
 # Sources
 * [GameFAQs](https://gamefaqs.gamespot.com/)
+* [MiSTer Addons](https://misteraddons.com/)
 * [PlayStation Datacenter](https://psxdatacenter.com/)
 * [Redump](http://redump.org/)
 * [VGCollect](https://www.vgcollect.com/)
