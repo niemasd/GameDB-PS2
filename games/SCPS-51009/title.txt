@@ -1,1 +1,1 @@
-U - Underwater Unit
+U: Underwater Unit
